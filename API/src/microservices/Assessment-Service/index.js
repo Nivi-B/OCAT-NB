@@ -39,10 +39,15 @@ exports.submit = async (assessment) => {
   // the assessment data in the PostgreSQL database
 };
 
-exports.getList = () => {
+exports.getList = async () => {
+  console.log(`helloo`);
   // use the bookshelf model Assessments from API/src/microservices/Database to fetch
   // the assessment data from the PostgreSQL database
-  const assessments = [];
+
+  // SELECT *
+  // FROM assessments;
+
+  const assessments = await Assessments.fetchAll();
 
   return assessments;
 };

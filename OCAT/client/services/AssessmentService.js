@@ -1,5 +1,5 @@
+
 import Axios from '../utils/http.config';
-// import { NewAssessment } from '../pages/Assessments/NewAssessment';
 
 export class AssessmentService {
   static submit(assessment) {
@@ -18,17 +18,21 @@ export class AssessmentService {
 
   static getList() {
     try {
+      console.log(`task 2 started`);
+
       // Choose the correct method, url, and data to send
       // in a request to the express OCAT/server/routes/Assessment/index.js
       // NOTE: the http.config file automatically adds /api to the front of your url
-      return Axios.METHOD(`/some-url`, {
-        params: {
-        },
-      })
-        .then(response => response.data.data.assessment);
+      return Axios.get(`/assessment/list`)
+        .then(response => {
+          console.log(response.data);
+
+          return response.data.data.assessments;
+        });
     }
     catch (err) {
       throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
     }
   }
+
 }
