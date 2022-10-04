@@ -2,9 +2,10 @@
   "watch": [
     "server",
     "config",
+    "client",
     "index.js",
     "config.json"
   ],
-  "ext": ".js,.json",
+  "ext": ".js,.json,.jsx",
   "ignore": []
 }
