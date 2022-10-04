@@ -25,6 +25,7 @@
         "react-dom-factories": "^1.0.2",
         "react-hook-form": "^7.35.0",
         "react-router-dom": "^5.2.0",
+        "react-table": "^7.8.0",
         "restify-clients": "^3.1.0",
         "restify-errors": "^8.0.2",
         "serve-favicon": "^2.5.0",
@@ -4254,14 +4255,20 @@
       }
     },
     "node_modules/caniuse-lite": {
-      "version": "1.0.30001236",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001236.tgz",
-      "integrity": "sha512-o0PRQSrSCGJKCPZcgMzl5fUaj5xHe8qA2m4QRvnyY4e1lITqoNkr7q/Oh1NcpGSy0Th97UZ35yoKcINPoq7YOQ==",
+      "version": "1.0.30001415",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001415.tgz",
+      "integrity": "sha512-ER+PfgCJUe8BqunLGWd/1EY4g8AzQcsDAVzdtMGKVtQEmKAwaFfU6vb7EAVIqTMYsqxBorYZi2+22Iouj/y7GQ==",
       "dev": true,
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/browserslist"
-      }
+      "funding": [
+        {
+          "type": "opencollective",
+          "url": "https://opencollective.com/browserslist"
+        },
+        {
+          "type": "tidelift",
+          "url": "https://tidelift.com/funding/github/npm/caniuse-lite"
+        }
+      ]
     },
     "node_modules/caseless": {
       "version": "0.12.0",
@@ -10721,6 +10728,18 @@
         "isarray": "0.0.1"
       }
     },
+    "node_modules/react-table": {
+      "version": "7.8.0",
+      "resolved": "https://registry.npmjs.org/react-table/-/react-table-7.8.0.tgz",
+      "integrity": "sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==",
+      "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/tannerlinsley"
+      },
+      "peerDependencies": {
+        "react": "^16.8.3 || ^17.0.0-0 || ^18.0.0"
+      }
+    },
     "node_modules/react-transition-group": {
       "version": "4.4.2",
       "resolved": "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.2.tgz",
@@ -16973,9 +16992,9 @@
       }
     },
     "caniuse-lite": {
-      "version": "1.0.30001236",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001236.tgz",
-      "integrity": "sha512-o0PRQSrSCGJKCPZcgMzl5fUaj5xHe8qA2m4QRvnyY4e1lITqoNkr7q/Oh1NcpGSy0Th97UZ35yoKcINPoq7YOQ==",
+      "version": "1.0.30001415",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001415.tgz",
+      "integrity": "sha512-ER+PfgCJUe8BqunLGWd/1EY4g8AzQcsDAVzdtMGKVtQEmKAwaFfU6vb7EAVIqTMYsqxBorYZi2+22Iouj/y7GQ==",
       "dev": true
     },
     "caseless": {
@@ -21992,6 +22011,12 @@
         "tiny-invariant": "^1.0.2",
         "tiny-warning": "^1.0.0"
       }
+    },
+    "react-table": {
+      "version": "7.8.0",
+      "resolved": "https://registry.npmjs.org/react-table/-/react-table-7.8.0.tgz",
+      "integrity": "sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==",
+      "requires": {}
     },
     "react-transition-group": {
       "version": "4.4.2",
