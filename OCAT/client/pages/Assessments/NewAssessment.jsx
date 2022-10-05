@@ -15,7 +15,6 @@ export const NewAssessment = () => {
       plays_with_dogs: ``,
       previous_contact: ``,
     },
-
   });
 
   // create a form that utilizes the "onSubmit" function to send data to OCAT/client/services/AssessmentService.js and
