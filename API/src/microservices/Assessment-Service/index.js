@@ -26,10 +26,6 @@ exports.submit = async (assessment) => {
       risk_level: assessment.risk_level,
     })
       .save()
-      .then(response => {
-        console.log(response.data);
-        console.log(response);
-      });
   }
   catch (err) {
     throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
