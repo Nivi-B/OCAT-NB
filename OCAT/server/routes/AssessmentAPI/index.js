@@ -1,5 +1,4 @@
 const { AssessmentService } = require(`../../libs`);
-// import { AssessmentService } from '../../services/AssessmentService';
 const router = require(`express`).Router();
 
 router.post(`/submit`, (req, res, next) => {
