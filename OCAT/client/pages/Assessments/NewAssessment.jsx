@@ -23,37 +23,31 @@ export const NewAssessment = () => {
   const onSubmit = async (data) => {
     try
     {
-      const num1 = parseInt(data.previous_contact);
-      const num2 = parseInt(data.altercations_with_cats);
-      const num3 = parseInt(data.altercations_with_owner);
-      const num4 = parseInt(data.plays_with_dogs);
-      const num5 = parseInt(data.hisses_at_strangers);
-      let risk_level = ``;
+      const response1 = parseInt(data.previous_contact);
+      const response2 = parseInt(data.altercations_with_cats);
+      const response3 = parseInt(data.altercations_with_owner);
+      const response4 = parseInt(data.plays_with_dogs);
+      const response5 = parseInt(data.hisses_at_strangers);
+      const score = response1 + response2 + response3 + response4 + response5;
+     
       const created_at = new Date();
 
-      const score = num1 + num2 + num3 + num4 + num5;
-      console.log(num1);
-      console.log(num2);
-      console.log(num3);
-      console.log(num4);
-      console.log(num5);
-      console.log(`score:${score}`);
-
+      let risk_level = ``;
       switch (score) {
+        case 1:
+          risk_level = `Low`;
+          break;
         case 2:
         case 3:
-          risk_level = `Medium Risk`;
+          risk_level = `Medium`;
           break;
         case 4:
         case 5:
-          risk_level = `High Risk`;
+          risk_level = `High`;
           break;
         default:
-          risk_level = `low Risk`;
+          throw new Error(`unable to map risk level`);
       }
-      console.log(risk_level);
-      console.log(created_at);
-      console.log(`data`, data);
 
       await AssessmentService.submit({ score, risk_level, created_at, data });
     }
